@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
         <title>Virginia Voting Statistics</title>
         <style> 
-          
+            html{
+                margin: 35px;
+                padding: 0;
+                height: 95%;
+			}
+		
+			body{ 
+                font: 100% arial, sans-serif;
+                color: #555753; 
+                height:95%;
+			}
+			iframe {
+                float: left;
+                border: 1em solid white;
+                height:95%;
+			}
         </style>
     </head>
   
     <body>
-        <py-script>
-            import pandas as pd
-            import numpy as np
-            print('Hello world')
-        </py-script>
+        <h2> Introduction: </h2>
+        <p>
+            For this project I will be using a deep learning model to predict recessions. 
+            I will begin with a brief overview of the problem and a review of previous 
+            literature, and follow with an overview of the data I will be using. Then 
+            I will go over how the model itself works and the results I got. Overall my 
+            model does a pretty good job at classifying whether a quarter  will be a 
+            recession or not.
+        </p>
     </body>
  </html>
