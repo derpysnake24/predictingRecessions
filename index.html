@@ -72,13 +72,15 @@
 		    at learning from time series data. At its most basic, an RNN takes and input, produces and output, and then that output 
 		    is fed back as an input of the network over multiple iterations. The image below is a good representation of this:
 		    <br>
-		    insert image here
+		    <iframe src="LSTM3-SimpleRNN.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    Clearly these models would be great for analyzing time series data because they can connect information from earlier in the 
 		    network to correctly determine an output later on. A problem arises when the relavent information is too far back in the network
 		    for the model to use correcly. That is where an LSTM comes in; they were built to understand long-term dependencies. 
 		    <br>
-		    insert image here
+		    <iframe src="LSTM3-chain.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    In the above diagram, the top line has the least interactions and is where information can travel largely unchanged from 
 		    iteration to iteration. Note that there are two pink nodes where it can be changed. In the first column of the bottom row, 
@@ -100,26 +102,31 @@
 		    Then I need to convert the series to supervised learning with the following function. This will alow the data to be used 
 		    by the tensorflow model.
 		    <br>
-		    image
+		    <iframe src="superviseFuntion.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    Then I scale the data and drop the columns I don't intend to use (I imported more columns than I specified in the Data section), 
 		    most importantly dropping the input variables for y and the output variable for x
 		    <br>
-		    image
+		    <iframe src="moreDataProcessing.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    Then the data is split into train and test sets:
 		    <br>
-		    image
+		    <iframe src="tts.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    Finally I design and run the model. I use two convoluted layers and regularize the LSTM model using Lasso to possibly set 
 		    some of the parameters are zero. The output layer is sigmoid since this is essentially a classification problem, either a 
 		    recession or not a recession.
 		    <br>
-		    image
+		    <iframe src="modelFinal.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    And I return the loss and accuracy of the model:
 		    <br>
-		    image
+		    <iframe src="results.png" width = "100%" height = "50%" 
+    			frameBorder="0"></iframe> 
 		    <br>
 		    Overall it does a pretty good job.
 	    </p>
