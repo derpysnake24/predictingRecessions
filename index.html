@@ -92,9 +92,39 @@
 	    </p>
 	    <h2> Analysis/Code: </h2>
 	    <p>
-		After importing numpys, pandas, and the preprocessed data, we need to import the necessary libraries to build the neural network
-		    
+		After importing numpys, pandas, and the preprocessed data, we need to import the necessary libraries to build the neural network.
+		    <br>
+		    insert image
+		    <br>
+		    Then I need to convert the series to supervised learning with the following function. This will alow the data to be used 
+		    by the tensorflow model.
+		    <br>
+		    image
+		    <br>
+		    Then I scale the data and drop the columns I don't intend to use (I imported more columns than I specified in the Data section), 
+		    most importantly dropping the input variables for y and the output variable for x
+		    <br>
+		    image
+		    <br>
+		    Then the data is split into train and test sets:
+		    <br>
+		    image
+		    <br>
+		    Finally I design and run the model. I use two convoluted layers and regularize the LSTM model using Lasso to possibly set 
+		    some of the parameters are zero. The output layer is sigmoid since this is essentially a classification problem, either a 
+		    recession or not a recession.
+		    <br>
+		    image
+		    <br>
+		    And I return the loss and accuracy of the model:
+		    <br>
+		    image
+		    <br>
+		    Overall it does a pretty good job.
 	    </p>
-	    
+	    <h2> Conclusion: </h2>
+	    <p>
+		
+	    </p>
     </body>
  </html>
