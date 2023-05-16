@@ -18,7 +18,8 @@
 		iframe{
 			float: center;
 			border: 1em solid white;
-		
+			width:100%;
+			height:100%;
 		}
         </style>
     </head>
@@ -67,7 +68,7 @@
 		    where 1 represents a quarter where a recessions took place and 0 does not, inferred by the Federal Reserve based 
 		    on a GDP recession indicator. The following graphic displays the variables overtime. 
 		    <br>
-		    <iframe src="dashboardFinal.html" width = "800px" height = "2000px" 
+		    <img src="dashboardFinal.html" width = "800px" height = "2000px" 
     				frameBorder="0"></iframe> 
 		    <br>
 	    </p>
@@ -77,14 +78,14 @@
 		    at learning from time series data. At its most basic, an RNN takes and input, produces and output, and then that output 
 		    is fed back as an input of the network over multiple iterations. The image below is a good representation of this:
 		    <br>
-		    <iframe src="LSTM3-SimpleRNN.png" width = "300px" height = "300px" 
+		    <img src="LSTM3-SimpleRNN.png" width = "300px" height = "300px" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    Clearly these models would be great for analyzing time series data because they can connect information from earlier in the 
 		    network to correctly determine an output later on. A problem arises when the relavent information is too far back in the network
 		    for the model to use correcly. That is where an LSTM comes in; they were built to understand long-term dependencies. 
 		    <br>
-		    <iframe src="LSTM3-chain.png" width = "300px" height = "300px" 
+		    <img src="LSTM3-chain.png" width = "300px" height = "300px" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    In the above diagram, the top line has the least interactions and is where information can travel largely unchanged from 
@@ -100,36 +101,36 @@
 	    <p>
 		After importing numpys, pandas, and the preprocessed data, we need to import the necessary libraries to build the neural network.
 		    <br>
-		    <iframe src="libraryImport.png" width = "800px" height = "800px" 
+		    <img src="libraryImport.png" width = "800px" height = "800px" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    Then I need to convert the series to supervised learning with the following function. This will alow the data to be used 
 		    by the tensorflow model.
 		    <br>
-		    <iframe src="superviseFunction.png" width = "400px" height = "400px" 
+		    <img src="superviseFunction.png" width = "400px" height = "400px" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    Then I scale the data and drop the columns I don't intend to use (I imported more columns than I specified in the Data section), 
 		    most importantly dropping the input variables for y and the output variable for x
 		    <br>
-		    <iframe src="moreDataProcessing.png" width = "300px" height = "300px" 
+		    <img src="moreDataProcessing.png" width = "300px" height = "300px" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    Then the data is split into train and test sets:
 		    <br>
-		    <iframe src="tts.png" width = "300px" height = "300px"  
+		    <img src="tts.png" width = "300px" height = "300px"  
     			frameBorder="0"></iframe> 
 		    <br>
 		    Finally I design and run the model. I use two convoluted layers and regularize the LSTM model using Lasso to not set 
 		    any of the parameters are zero. The output layer is sigmoid since this is essentially a classification problem, either a 
 		    recession or not a recession.
 		    <br>
-		    <iframe src="modelFinal.png" width = "500px" height = "500px"  
+		    <img src="modelFinal.png" width = "500px" height = "500px"  
     			frameBorder="0"></iframe> 
 		    <br>
 		    And I return the loss and accuracy of the model:
 		    <br>
-		    <iframe src="results.png" width = "180px" height = "auto" 
+		    <img src="results.png" width = "180px" height = "auto" 
     			frameBorder="0"></iframe> 
 		    <br>
 		    Overall it does a pretty good job.
