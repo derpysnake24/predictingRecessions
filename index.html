@@ -18,13 +18,14 @@
 		}
 		iframe{
 			float: center;
-			border: 2.5em solid white;
+			border: 2.5em solid ;
 			
 		}
 		img{
 			width = "50%";
 			height = "auto";
     			border 2.5em ;
+			border: 5px solid ;
         </style>
     </head>
   
@@ -83,14 +84,14 @@
 		    is fed back as an input of the network over multiple iterations. The image below is a good representation of this:
 		    <br>
 		    <img src="LSTM3-SimpleRNN.png" width = "50%" height = "auto"
-    			border 2.5em ></img> 
+    			border 2.5em class="center" ></img> 
 		    <br>
 		    Clearly these models would be great for analyzing time series data because they can connect information from earlier in the 
 		    network to correctly determine an output later on. A problem arises when the relavent information is too far back in the network
 		    for the model to use correcly. That is where an LSTM comes in; they were built to understand long-term dependencies. 
 		    <br>
 		    <img src="LSTM3-chain.png"width = "50%" height = "auto"
-    			border 2.5em ></img>
+    			border 2.5em class="center"></img>
 		    <br>
 		    In the above diagram, the top line has the least interactions and is where information can travel largely unchanged from 
 		    iteration to iteration. Note that there are two pink nodes where it can be changed. In the first column of the bottom row, 
